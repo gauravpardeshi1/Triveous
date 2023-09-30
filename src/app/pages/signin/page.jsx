@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../Firebase'
 const Signin = () => {
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')
@@ -45,9 +47,22 @@ const Signin = () => {
     }
   }
 
-  const handleGoogleAuth = (e) => {
+  const handleGoogleAuth = async  (e) => {
     e.preventDefault()
     console.log('Google Auth')
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+        alert ('signin')
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert ('failed')
+      });
   }
 
   useEffect(() => {

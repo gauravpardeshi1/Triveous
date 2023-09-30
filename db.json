@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Gaurav Pardeshi",
+      "email": "gauravpardeshi068@gmail.com",
+      "password": "1111",
+      "id": 1
+    },
+    {
+      "name": "Bhushan Pardeshi",
+      "email": "bhushan@gmail.com",
+      "password": "2222",
+      "id": 2
+    },
+    {
+      "name": "Ganesh",
+      "email": "g@gmail.com",
+      "password": "0000",
+      "id": 3
+    },
+    {
+      "name": "Masai",
+      "email": "masai@gmail.com",
+      "password": "1010",
+      "id": 4
+    }
+  ]
+}

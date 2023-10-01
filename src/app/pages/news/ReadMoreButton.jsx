@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from "next/link"
 
-const ReadMoreButton = () => {
+const ReadMoreButton = ({data}) => {
+ 
   return (
     <div>
        <Link href={{
-            pathname: '/article',
-            
+            pathname: '/newsDetails',
+            query: data
 
         }}
             prefetch={false}

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { useState } from "react";
 import Link from 'next/link';
@@ -26,39 +28,42 @@ const handleToggle=()=>{
                 <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
    
                     <li><a  className="text-white font-medium hover:text-blue-300" href="/">Dashboard</a></li>
-                    <li><a  className="text-white font-medium hover:text-blue-300" href="">About</a>
-                    </li>
+                   
                     <li><a  className="text-white font-medium hover:text-blue-300"
-                            href="#">Services</a></li>
-                    <li><a  className="text-white font-medium hover:text-blue-300" href="#">Help</a>
+                            href="/favourite">Favorite</a></li>
+ <li><a  className="text-white font-medium hover:text-blue-300" href="">Help</a>
                     </li>
                 </ul>
                
                 <div className="hidden xl:flex  space-x-5 items-center">
 
-
-                    <a className="text-white flex items-center" href="#">
+              
+                    <a href="/signup" className="text-white w-6 h-6 flex items-center" >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-gray-200" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </a>
-                    <a   className="text-white flex items-center" href="#" 
-                        tooltip-template="tooltip">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                            <line x1="12" y1="16" x2="12" y2="12" strokeWidth="2" />
-                            <line x1="12" y1="8" x2="12" y2="8" strokeWidth="2" />
-                        </svg>
-                        <span className="flex absolute -mt-5 ml-4">
-                            <span
-                                className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-blue-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500">
-                            </span>
-                        </span>
-                    </a>
+                    <a  className='hover:cursor-pointer items-center'  href="/favourite" >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 text-gray-100  transition-colors duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M12 21.35l-1.45-1.32C5.4 16.13 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 7.63-8.55 11.54L12 21.35z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+
+
+                </a>
 
                 </div>
             </div>
@@ -95,7 +100,7 @@ const handleToggle=()=>{
 
                 <li>
                     <a 
-                        className="block py-2  pl-3 pr-4   text-white rounded   md:border-0 md:hover:text-blue-700 md:p-0 ">About</a>
+                        className="block py-2  pl-3 pr-4   text-white rounded   md:border-0 md:hover:text-blue-700 md:p-0 ">Favorite</a>
                 </li>
                 <li>
                     <a 

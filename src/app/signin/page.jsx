@@ -1,8 +1,11 @@
+"use client"
+
+
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../../Firebase'
+import { auth } from '../Firebase'
 const Signin = () => {
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')
@@ -47,21 +50,21 @@ const Signin = () => {
     }
   }
 
-  const handleGoogleAuth = async  (e) => {
+  const handleGoogleAuth = async (e) => {
     e.preventDefault()
-    console.log('Google Auth')
+    // console.log('Google Auth')
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         // ...
-        alert ('signin')
+        alert('signin')
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert ('failed')
+        alert('failed')
       });
   }
 
@@ -70,7 +73,7 @@ const Signin = () => {
   }, [])
 
 
-  
+
 
 
 
@@ -112,7 +115,7 @@ const Signin = () => {
                     <span>Login with Google</span>
                   </button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                    Don’t have an account yet? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                    Don’t have an account yet? <a href="/signup" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
                 </form>
               </div>

@@ -24,5 +24,21 @@
       "password": "1010",
       "id": 4
     }
+  ],
+  "favourite": [
+    {
+      "source": {
+        "id": null,
+        "name": "NDTV News"
+      },
+      "author": "NDTV Sports Desk",
+      "title": "India vs England Live Score, Cricket World Cup 2023 Warm Up Match: Rain Returns In Guwahati, India vs England In Jeopardy | Cricket News - NDTV Sports",
+      "description": "IND vs ENG, World Cup Warm Up Highlights: The ODI World Cup 2023 warm-up game between India and England was called off due to heavy rain in Guwahati.",
+      "url": "https://sports.ndtv.com/cricket/india-vs-england-icc-odi-world-cup-2023-warm-up-match-live-score-updates-4437471",
+      "urlToImage": "https://c.ndtvimg.com/2023-09/96gpv34_guwahati-rain_625x300_30_September_23.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675",
+      "publishedAt": "2023-09-30T11:41:26Z",
+      "content": "IND vs ENG, ICC World Cup Warm-up, Highlights: The ODI World Cup 2023 warm-up game between India and England was called off due to heavy rain in Guwahati. The match was cancelled without a ball being… [+226 chars]",
+      "id": 1
+    }
   ]
 }

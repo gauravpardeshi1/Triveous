@@ -4,16 +4,21 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
+import { useRouter } from 'next/router';
+
 const Signup = () => {
   const [name, setname] = useState('')
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')
   const [checkuser, setcheckusser] = useState([])
 
+
+
   const getUser = () => {
+
     try {
       axios.get(`http://localhost:8080/users`).then(res => {
-        console.log('getuser', res.data)
+        //console.log('getuser', res.data)
         setcheckusser(res.data)
 
       }
@@ -46,6 +51,7 @@ const Signup = () => {
             setname('')
             setemail('')
             setpassword('')
+           
 
           }
         }

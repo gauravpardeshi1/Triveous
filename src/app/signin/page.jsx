@@ -5,12 +5,16 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../Firebase'
+import { UserAuth } from "../context/AuthContext";
+import { useRouter } from 'next/navigation';
+
 const Signin = () => {
+  const { user, googleSignIn, logOut ,updateAuthData } = UserAuth();
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')
   const [checkuser, setcheckusser] = useState([])
 
+  const router=useRouter()
   const getUser = () => {
     try {
       axios.get(`http://localhost:8080/users`).then(res => {
@@ -26,51 +30,47 @@ const Signin = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
+
+    
     const foundUser = checkuser.find((user) => user.email === email && user.password === password);
 
     if (foundUser) {
-
-      toast.success('User Login Successfully ..!', {
-        style: {
-          border: '1px solid #713200',
-          padding: '16px',
-          color: '#713200',
-        },
-        iconTheme: {
-          primary: '#713200',
-          secondary: '#FFFAEE',
-        },
+      updateAuthData (foundUser)
+      toast('User Login successful!', {
+        icon: '✔️ ',
       });
       setemail('')
       setpassword('')
-      return;
+      router.push('/')
+      
     } else {
       toast.error('wrong credentials !!')
 
     }
   }
 
-  const handleGoogleAuth = async (e) => {
-    e.preventDefault()
-    // console.log('Google Auth')
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // ...
-        alert('signin')
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert('failed')
-      });
+  const handleGoogleAuth = async () => {
+   
+    try {
+      await googleSignIn();
+     
+     
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
     getUser()
-  }, [])
+    console.log('user',user)
+    if(user){
+      toast('User Login successful!', {
+        icon: '✔️ ',
+      });
+     router.push('/')
+
+    }
+  }, [user])
 
 
 

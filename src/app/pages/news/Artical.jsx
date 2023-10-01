@@ -1,29 +1,57 @@
-import React from 'react'
-import ReadMoreButton from './ReadMoreButton' 
+'use client'
+import React, { useEffect, useState } from 'react'
+import ReadMoreButton from './ReadMoreButton'
 import axios from 'axios'
+import { Toaster ,toast } from 'react-hot-toast'
 
-const Artical = ({data}) => {
+const Artical = ({ data }) => {
+  const[checkfavnews,setcheckfavnews]=useState([])
 
-    const handlefavouritenews=(e)=>{
-e.preventDefault()
-console.log('fav',data);
+  const getfavdata=()=>{
+    axios.get(`http://localhost:8080/favourite`).then(res => {
+        //console.log('getuser',res.data)
+        setcheckfavnews(res.data)
 
-try {
-    axios.post(`http://localhost:8080/favourite`,data)
-    .then(res=>{
-        if(res){
-            alert('added')
-        }
-    })
-} catch (error) {
-    console.log(error)
-}
-    }
-  
-    return (
+      }
+      )
+  }
+    const handlefavouritenews = (e) => {
+        e.preventDefault()
+       // console.log('fav', data);
        
-        <div className=''>
+      const foundUser = checkfavnews.find((el) => el.title === data.title && el.author === data.author);
+      
+    if (foundUser) {
+       
+        toast('already in Favourite!', {
+            icon: '👍',
+          });
+    }else{
+        console.log('added in fav',checkfavnews);
+        try {
+            axios.post(`http://localhost:8080/favourite`, data)
+                .then(res => {
+                    if (res) {
+                        toast('added in Favourite!', {
+                            icon: '✔️ ',
+                          });
+                    }
+                })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
+       
+    }
+    useEffect(()=>{
+        getfavdata()
+    },[])
+
+    return (
+   
+        <div className=''>
+<Toaster/>
             <article className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">
                 <a href="" onClick={handlefavouritenews} className='hover:cursor-pointer justify-end absolute right-5 mt-3'>
                     <svg
@@ -46,8 +74,8 @@ try {
                 </a>
                 {
                     data &&
-                        <img src={data?.urlToImage} className="object-cover w-full rounded-t-lg h-60 " /> 
-                       
+                    <img src={data?.urlToImage} className="object-cover w-full rounded-t-lg h-60 " />
+
 
                 }
                 <div className="flex flex-col flex-1">
@@ -56,9 +84,9 @@ try {
                         <section className="flex-1 mt-2">
                             <p className="text-xs line-clamp-3 text-article-dark-primary dark:text-article-light-primary">The accolades keep coming in for Jackson Holliday. Holliday, the No. 1 prospect in baseball, was named the Orioles&#x2019; Brooks Robinson Minor League Player</p>
                         </section>
-                      
+
                     </div>
-                    <ReadMoreButton data={data}  />
+                    <ReadMoreButton data={data} />
                 </div>
             </article>
         </div>

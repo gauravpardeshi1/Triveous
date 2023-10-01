@@ -1,44 +1,32 @@
 {
   "users": [
     {
-      "name": "Gaurav Pardeshi",
+      "displayName": "Gaurav Pardeshi",
       "email": "gauravpardeshi068@gmail.com",
       "password": "1111",
       "id": 1
     },
     {
-      "name": "Bhushan Pardeshi",
+      "displayName": "Bhushan Pardeshi",
       "email": "bhushan@gmail.com",
       "password": "2222",
       "id": 2
-    },
-    {
-      "name": "Ganesh",
-      "email": "g@gmail.com",
-      "password": "0000",
-      "id": 3
-    },
-    {
-      "name": "Masai",
-      "email": "masai@gmail.com",
-      "password": "1010",
-      "id": 4
     }
   ],
   "favourite": [
     {
       "source": {
         "id": null,
-        "name": "NDTV News"
+        "name": "Hindustan Times"
       },
-      "author": "NDTV Sports Desk",
-      "title": "India vs England Live Score, Cricket World Cup 2023 Warm Up Match: Rain Returns In Guwahati, India vs England In Jeopardy | Cricket News - NDTV Sports",
-      "description": "IND vs ENG, World Cup Warm Up Highlights: The ODI World Cup 2023 warm-up game between India and England was called off due to heavy rain in Guwahati.",
-      "url": "https://sports.ndtv.com/cricket/india-vs-england-icc-odi-world-cup-2023-warm-up-match-live-score-updates-4437471",
-      "urlToImage": "https://c.ndtvimg.com/2023-09/96gpv34_guwahati-rain_625x300_30_September_23.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675",
-      "publishedAt": "2023-09-30T11:41:26Z",
-      "content": "IND vs ENG, ICC World Cup Warm-up, Highlights: The ODI World Cup 2023 warm-up game between India and England was called off due to heavy rain in Guwahati. The match was cancelled without a ball being… [+226 chars]",
-      "id": 1
+      "author": "Gaurav Bisht",
+      "title": "Himachal-based environmentalists call to rethink policies for sustainable future - Hindustan Times",
+      "description": "In a devastating turn of events, Himachal Pradesh has recently experienced an unprecedented disaster during the monsoon season.",
+      "url": "https://www.hindustantimes.com/cities/chandigarh-news/himachalbased-environmentalists-call-to-rethink-policies-for-sustainable-future-101696093914931.html",
+      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/09/30/1600x900/A-study-by-the-State-Disaster-Management-Authority_1695633955878_1696094619071.jpg",
+      "publishedAt": "2023-09-30T17:11:54Z",
+      "content": "In the aftermath of floods, as Himachal Pradesh is battling to rebuild the ravaged regions, the environmental groups have called on the state government to rethink its policies that are proving detri… [+4601 chars]",
+      "id": 2
     }
   ]
 }

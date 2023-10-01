@@ -2,33 +2,89 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Artical from '../pages/news/Artical'
+import ReadMoreButton from '../pages/news/ReadMoreButton'
+import { Toaster ,toast } from 'react-hot-toast'
 
 const Favourite = () => {
-  const [newsdata,setnewsdata]=useState([])
-  const [loading,setloading]=useState(false)
-  const getnewsdata=()=>{
+  const [newsdata, setnewsdata] = useState([])
+  const [loading, setloading] = useState(false)
+  const getnewsdata = () => {
     setloading(true)
     try {
       axios.get(`http://localhost:8080/favourite`)
-      .then(res =>{
-        setnewsdata(res.data)
-        setloading(false)
-      })
-     
+        .then(res => {
+          setnewsdata(res.data)
+          setloading(false)
+        })
+
     } catch (error) {
       console.log(error)
     }
   }
 
-  useEffect(()=>{
+  const handledelete = (id) => {
+    //console.log(id)
+    try {
+      axios.delete(`http://localhost:8080/favourite/${id}`)
+      .then(res=>{
+        if(res){
+          toast('news deleted !', {
+            icon: '❌',
+          });
+          getnewsdata()
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
     getnewsdata()
-  },[])
-  console.log('fav',newsdata)
+  }, [])
+  //console.log('fav', newsdata)
   return (
-    <div>
-      <Artical data={newsdata && newsdata}/>
+    <> 
+    <Toaster/>
+    {newsdata.length==0 &&<h1 className='text-gray-600 text-2xl font-semibold text-center mt-24'>No news Avilable in Favourite ..!!</h1> }
+    <div className='w-[95%] mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10'>
+      {newsdata && newsdata.map((el) =>
+        <article className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">
+          <a href="#" onClick={() => handledelete(el.id)} className='hover:cursor-pointer justify-end absolute right-5 mt-3'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-10 bg-gray-400 rounded-lg h-10 text-gray-100 hover:text-red-500 transition-colors duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </a>
+
+
+          <img src={el.urlToImage} className="object-cover w-full rounded-t-lg h-60 " />
+
+
+
+          <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 p-5">
+              <h2 className="font-serif font-bold text-article-dark dark:text-article-light">{el.title}</h2>
+              <section className="flex-1 mt-2">
+                <p className="text-xs line-clamp-3 text-article-dark-primary dark:text-article-light-primary">The accolades keep coming in for Jackson Holliday. Holliday, the No. 1 prospect in baseball, was named the Orioles&#x2019; Brooks Robinson Minor League Player</p>
+              </section>
+
+            </div>
+            <ReadMoreButton data={...el} />
+          </div>
+        </article>
+      )}
     </div>
+    </>
   )
 }
 

@@ -17,16 +17,50 @@
     {
       "source": {
         "id": null,
-        "name": "Hindustan Times"
+        "name": "Pratidintime.com"
       },
-      "author": "Gaurav Bisht",
-      "title": "Himachal-based environmentalists call to rethink policies for sustainable future - Hindustan Times",
-      "description": "In a devastating turn of events, Himachal Pradesh has recently experienced an unprecedented disaster during the monsoon season.",
-      "url": "https://www.hindustantimes.com/cities/chandigarh-news/himachalbased-environmentalists-call-to-rethink-policies-for-sustainable-future-101696093914931.html",
-      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/09/30/1600x900/A-study-by-the-State-Disaster-Management-Authority_1695633955878_1696094619071.jpg",
-      "publishedAt": "2023-09-30T17:11:54Z",
-      "content": "In the aftermath of floods, as Himachal Pradesh is battling to rebuild the ravaged regions, the environmental groups have called on the state government to rethink its policies that are proving detri… [+4601 chars]",
+      "author": "Pratidin Time",
+      "title": "Aditya-L1 Mission: Spacecraft Travelled Beyond Distance of 9.2 Lakh KM from Earth - Pratidin Time",
+      "description": "The Indian Space Research Organisation’s (ISRO) ambitious solar exploration mission Aditya-L1 has travelled beyond a distance of 9.2 lakh kilometres from Earth,",
+      "url": "https://www.pratidintime.com/national/aditya-l1-mission-spacecraft-travelled-beyond-distance-of-92-lakh-km-from-earth",
+      "urlToImage": "https://gumlet.assettype.com/pratidintime%2F2023-09%2F21c2879b-b1d0-4fb4-8e6f-9be7fa9ba425%2FWEB_PT_Recovered.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true",
+      "publishedAt": "2023-10-01T08:14:59Z",
+      "content": "·         Physics of solar corona and its heating mechanism.\r\n·         Diagnostics of the coronal and coronal loops plasma: Temperature, velocity and density.\r\n·         Development, dynamics and or… [+352 chars]",
+      "username": "Gaurav Pardeshi",
+      "useremail": "gauravpardeshi068@gmail.com",
+      "id": 1
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "NDTV News"
+      },
+      "author": null,
+      "title": "Blast Near Turkish Parliament, Government Calls It \"Terrorist Attack\" - NDTV",
+      "description": "Turkey Parliament Explosion: A \"terrorist attack\" took place near Turkey's parliament in Ankara on Sunday leaving two police officers injured, the interior ministry said.",
+      "url": "https://www.ndtv.com/world-news/explosion-gunfire-heard-near-turkish-parliament-report-4439864",
+      "urlToImage": "https://c.ndtvimg.com/2023-10/efksgun_turkey-ankara-blast-_625x300_01_October_23.jpg",
+      "publishedAt": "2023-10-01T07:29:21Z",
+      "content": "Gunfire Near Turkey Parliament: The targeted district is home to several other ministries.\r\nAnkara: A \"terrorist attack\" took place near Turkey's parliament in Ankara on Sunday leaving two police off… [+852 chars]",
+      "username": "GAURAV",
+      "useremail": "maliraje123@gmail.com",
       "id": 2
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "BusinessLine"
+      },
+      "author": "Nabodita  Ganguly",
+      "title": "Unveiling the secrets of the universe in radio waves - BusinessLine",
+      "description": "Launched in 2018, MeerKAT is operated by the South African Radio Astronomy Observatory (SARAO), a national research facility funded by the Government of South Africa. MeerKAT was later integrated into the global Square Kilometre Array (SKA) initiative, which …",
+      "url": "https://www.thehindubusinessline.com/business-tech/unveiling-the-secrets-of-the-universe-in-radio-waves/article67368802.ece",
+      "urlToImage": "https://bl-i.thgim.com/public/news/v0spq4/article67368801.ece/alternates/LANDSCAPE_1200/BL0210_Quantum_2018-MeerKAT.jpg",
+      "publishedAt": "2023-10-01T10:05:47Z",
+      "content": "In 2018, Thoughtworks, a consultancy specialising in software and digital transformation, revealed a two-year collaboration with the Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pu… [+3433 chars]",
+      "username": "GAURAV",
+      "useremail": "maliraje123@gmail.com",
+      "id": 3
     }
   ]
 }

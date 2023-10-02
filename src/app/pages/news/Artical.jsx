@@ -2,56 +2,94 @@
 import React, { useEffect, useState } from 'react'
 import ReadMoreButton from './ReadMoreButton'
 import axios from 'axios'
-import { Toaster ,toast } from 'react-hot-toast'
+import { Toaster, toast } from 'react-hot-toast'
+import { UserAuth } from "../../context/AuthContext";
 
 const Artical = ({ data }) => {
-  const[checkfavnews,setcheckfavnews]=useState([])
+    const { user, authData } = UserAuth();
 
-  const getfavdata=()=>{
-    axios.get(`http://localhost:8080/favourite`).then(res => {
-        //console.log('getuser',res.data)
-        setcheckfavnews(res.data)
+    const [checkfavnews, setcheckfavnews] = useState([])
+    const [name, setname] = useState({
+        username: '',
+        useremail: ''
+    })
 
-      }
-      )
-  }
+    const getfavdata = () => {
+        axios.get(`http://localhost:8080/favourite`).then(res => {
+            //console.log('getuser',res.data)
+            setcheckfavnews(res.data)
+
+        }
+        )
+    }
     const handlefavouritenews = (e) => {
         e.preventDefault()
-       // console.log('fav', data);
-       
-      const foundUser = checkfavnews.find((el) => el.title === data.title && el.author === data.author);
-      
-    if (foundUser) {
-       
-        toast('already in Favourite!', {
-            icon: '👍',
-          });
-    }else{
-        console.log('added in fav',checkfavnews);
-        try {
-            axios.post(`http://localhost:8080/favourite`, data)
-                .then(res => {
-                    if (res) {
-                        toast('added in Favourite!', {
-                            icon: '✔️ ',
-                          });
-                    }
+        // console.log('fav', data);
+
+        const foundUser = checkfavnews.find((el) => el.title === data.title && el.author === data.author);
+
+        if (foundUser) {
+
+            toast('already in Favourite!', {
+                icon: '👍',
+            });
+        } else {
+            console.log('added in fav', checkfavnews);
+            try {
+                axios.post(`http://localhost:8080/favourite`, {
+                    ...data,
+                    username: name.username,
+                    useremail: name.useremail
                 })
-        } catch (error) {
-            console.log(error)
+                    .then(res => {
+                        if (res) {
+                            toast('added in Favourite!', {
+                                icon: '✔️ ',
+                            });
+                        }
+                    })
+            } catch (error) {
+                console.log(error)
+            }
         }
+
+
     }
 
-       
-    }
-    useEffect(()=>{
+
+    useEffect(() => {
+
         getfavdata()
-    },[])
+
+
+
+    }, [])
+    useEffect(() => {
+        if (user) {
+            setname((prevUser) => ({
+                ...prevUser,
+                username: user?.displayName,
+                useremail: user?.email,
+            }));
+        }
+    }, [user]);
+
+    useEffect(() => {
+        if (authData) {
+            setname((prevUser) => ({
+                ...prevUser,
+                username: authData?.displayName,
+                useremail: authData?.email,
+            }));
+        }
+    }, [authData]);
+    
+
 
     return (
-   
+
         <div className=''>
-<Toaster/>
+            <Toaster />
             <article className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">
                 <a href="" onClick={handlefavouritenews} className='hover:cursor-pointer justify-end absolute right-5 mt-3'>
                     <svg

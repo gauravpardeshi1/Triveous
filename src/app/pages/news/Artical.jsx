@@ -15,7 +15,7 @@ const Artical = ({ data }) => {
     })
 
     const getfavdata = () => {
-        axios.get(`http://localhost:8080/favourite`).then(res => {
+        axios.get(`https://flash-breezy-chime.glitch.me/favourite`).then(res => {
             //console.log('getuser',res.data)
             setcheckfavnews(res.data)
 
@@ -38,7 +38,7 @@ const Artical = ({ data }) => {
 
                 console.log('added in fav', checkfavnews);
                 try {
-                    axios.post(`http://localhost:8080/favourite`, {
+                    axios.post(`https://flash-breezy-chime.glitch.me/favourite`, {
                         ...data,
                         username: name.username,
                         useremail: name.useremail

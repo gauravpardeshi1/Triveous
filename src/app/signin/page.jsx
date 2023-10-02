@@ -17,7 +17,7 @@ const Signin = () => {
   const router=useRouter()
   const getUser = () => {
     try {
-      axios.get(`http://localhost:8080/users`).then(res => {
+      axios.get(`https://flash-breezy-chime.glitch.me/users`).then(res => {
         //console.log('getuser',res.data)
         setcheckusser(res.data)
 

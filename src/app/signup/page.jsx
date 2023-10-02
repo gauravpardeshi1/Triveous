@@ -17,7 +17,7 @@ const Signup = () => {
   const getUser = () => {
 
     try {
-      axios.get(`http://localhost:8080/users`).then(res => {
+      axios.get(`https://flash-breezy-chime.glitch.me/users`).then(res => {
         //console.log('getuser', res.data)
         setcheckusser(res.data)
 
@@ -44,7 +44,7 @@ const Signup = () => {
       setpassword('')
       return;
     } else {
-      axios.post(`http://localhost:8080/users`, obj)
+      axios.post(`https://flash-breezy-chime.glitch.me/users`, obj)
         .then(res => {
           if (res) {
             toast.success('User Register Successfully ..!')

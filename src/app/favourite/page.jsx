@@ -17,7 +17,7 @@ const Favourite = () => {
 
     setloading(true)
     try {
-      axios.get(`http://localhost:8080/favourite`)
+      axios.get(`https://flash-breezy-chime.glitch.me/favourite`)
         .then(res => {
           if (res) {
             setnewsdata(res.data);
@@ -33,7 +33,7 @@ const Favourite = () => {
   const handledelete = (id) => {
     //console.log(id)
     try {
-      axios.delete(`http://localhost:8080/favourite/${id}`)
+      axios.delete(`https://flash-breezy-chime.glitch.me/favourite/${id}`)
         .then(res => {
           if (res) {
             toast('news deleted !', {

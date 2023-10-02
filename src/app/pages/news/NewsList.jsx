@@ -25,6 +25,7 @@ const NewsList = () => {
   useEffect(()=>{
     getnewsdata()
   },[])
+
  
   return (
     <>

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import ReadMoreButton from '../pages/news/ReadMoreButton'
 import { Toaster, toast } from 'react-hot-toast'
 import { UserAuth } from "../context/AuthContext";
+import PrivateRoute from '../routes/page'
 
 const Favourite = () => {
   const { user, authData } = UserAuth();
@@ -75,8 +76,9 @@ const Favourite = () => {
   //console.log('usernews', usernews, user, authData)
   return (
     <>
-      <Toaster />
-      {usernews.length == 0 && <h1 className='text-gray-600 text-2xl font-semibold text-center mt-24'>No news Avilable in Favourite ..!!</h1>}
+
+      {/* <Toaster /> */}
+      {usernews.length == 0 && <h1 className='text-gray-600 text-2xl font-semibold text-center mt-24'>{(authData && authData.displayName) || (user && user.displayName)} No news Avilable in Favourite ..!!</h1>}
       <div className='w-[95%] mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10'>
         {usernews && usernews.map((el) =>
           <article className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">

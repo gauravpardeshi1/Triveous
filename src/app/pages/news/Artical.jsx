@@ -25,33 +25,41 @@ const Artical = ({ data }) => {
     const handlefavouritenews = (e) => {
         e.preventDefault()
         // console.log('fav', data);
+        if(user || authData){
+          
+            // const foundUser = checkfavnews.find((el) => el.title === data.title && el.author === data.author);
 
-        const foundUser = checkfavnews.find((el) => el.title === data.title && el.author === data.author);
+            // if (foundUser) {
+    
+            //     toast('already in Favourite!', {
+            //         icon: '👍',
+            //     });
+            // } 
 
-        if (foundUser) {
-
-            toast('already in Favourite!', {
-                icon: '👍',
-            });
-        } else {
-            console.log('added in fav', checkfavnews);
-            try {
-                axios.post(`http://localhost:8080/favourite`, {
-                    ...data,
-                    username: name.username,
-                    useremail: name.useremail
-                })
-                    .then(res => {
-                        if (res) {
-                            toast('added in Favourite!', {
-                                icon: '✔️ ',
-                            });
-                        }
+                console.log('added in fav', checkfavnews);
+                try {
+                    axios.post(`http://localhost:8080/favourite`, {
+                        ...data,
+                        username: name.username,
+                        useremail: name.useremail
                     })
-            } catch (error) {
-                console.log(error)
-            }
+                        .then(res => {
+                            if (res) {
+                                toast('added in Favourite!', {
+                                    icon: '✔️ ',
+                                });
+                            }
+                        })
+                } catch (error) {
+                    console.log(error)
+                }
+            
+        }else{
+            toast('Please login in first!', {
+                icon: ' ',
+            });
         }
+       
 
 
     }

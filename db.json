@@ -17,15 +17,15 @@
     {
       "source": {
         "id": null,
-        "name": "Pratidintime.com"
+        "name": "NDTV News"
       },
-      "author": "Pratidin Time",
-      "title": "Aditya-L1 Mission: Spacecraft Travelled Beyond Distance of 9.2 Lakh KM from Earth - Pratidin Time",
-      "description": "The Indian Space Research Organisation’s (ISRO) ambitious solar exploration mission Aditya-L1 has travelled beyond a distance of 9.2 lakh kilometres from Earth,",
-      "url": "https://www.pratidintime.com/national/aditya-l1-mission-spacecraft-travelled-beyond-distance-of-92-lakh-km-from-earth",
-      "urlToImage": "https://gumlet.assettype.com/pratidintime%2F2023-09%2F21c2879b-b1d0-4fb4-8e6f-9be7fa9ba425%2FWEB_PT_Recovered.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true",
-      "publishedAt": "2023-10-01T08:14:59Z",
-      "content": "·         Physics of solar corona and its heating mechanism.\r\n·         Diagnostics of the coronal and coronal loops plasma: Temperature, velocity and density.\r\n·         Development, dynamics and or… [+352 chars]",
+      "author": null,
+      "title": "At Least 7 Killed, 4 Injured In Spain Nightclub Fire - NDTV",
+      "description": "At least seven people were killed in a fire in a Spanish nightclub on Sunday morning, authorities said, with four more reported injured.",
+      "url": "https://www.ndtv.com/world-news/6-killed-in-spain-nightclub-fire-death-count-likely-to-increase-4440062",
+      "urlToImage": "https://c.ndtvimg.com/2023-10/gt56jbq_spain-nightclub-fire-twitter_625x300_01_October_23.jpg",
+      "publishedAt": "2023-10-01T10:30:20Z",
+      "content": "Thick smoke could be seen billowing from the roof of the building\r\nMadrid: At least seven people were killed in a fire in a Spanish nightclub on Sunday morning, authorities said, with four more repor… [+1458 chars]",
       "username": "Gaurav Pardeshi",
       "useremail": "gauravpardeshi068@gmail.com",
       "id": 1
@@ -33,34 +33,18 @@
     {
       "source": {
         "id": null,
-        "name": "NDTV News"
+        "name": "Hindustan Times"
       },
-      "author": null,
-      "title": "Blast Near Turkish Parliament, Government Calls It \"Terrorist Attack\" - NDTV",
-      "description": "Turkey Parliament Explosion: A \"terrorist attack\" took place near Turkey's parliament in Ankara on Sunday leaving two police officers injured, the interior ministry said.",
-      "url": "https://www.ndtv.com/world-news/explosion-gunfire-heard-near-turkish-parliament-report-4439864",
-      "urlToImage": "https://c.ndtvimg.com/2023-10/efksgun_turkey-ankara-blast-_625x300_01_October_23.jpg",
-      "publishedAt": "2023-10-01T07:29:21Z",
-      "content": "Gunfire Near Turkey Parliament: The targeted district is home to several other ministries.\r\nAnkara: A \"terrorist attack\" took place near Turkey's parliament in Ankara on Sunday leaving two police off… [+852 chars]",
-      "username": "GAURAV",
-      "useremail": "maliraje123@gmail.com",
+      "author": "HT Sports Desk",
+      "title": "Asian Games IND v CHN Live: Lakshya wins Match 1 to hand India early advantage - Hindustan Times",
+      "description": "India vs China men's badminton team final Live: Indian men's badminton team have qualified for the final for the first time ever in the history of Asian Games.",
+      "url": "https://www.hindustantimes.com/sports/badminton/asian-games-india-vs-china-badminton-live-score-ind-vs-chn-live-lakshya-sen-kidambi-srikanth-101696139991906.html",
+      "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/10/01/1600x900/bad_1696141645451_1696141657983.jpg",
+      "publishedAt": "2023-10-01T10:28:23Z",
+      "content": "Asian Games, India vs China men's badminton team finals Live Updates: Lakshya Sen hands India early advantage in the men's team badminton final against China at the Asian Games. Sen engages in a thre… [+15823 chars]",
+      "username": "Gaurav Pardeshi",
+      "useremail": "gauravpardeshi068@gmail.com",
       "id": 2
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "BusinessLine"
-      },
-      "author": "Nabodita  Ganguly",
-      "title": "Unveiling the secrets of the universe in radio waves - BusinessLine",
-      "description": "Launched in 2018, MeerKAT is operated by the South African Radio Astronomy Observatory (SARAO), a national research facility funded by the Government of South Africa. MeerKAT was later integrated into the global Square Kilometre Array (SKA) initiative, which …",
-      "url": "https://www.thehindubusinessline.com/business-tech/unveiling-the-secrets-of-the-universe-in-radio-waves/article67368802.ece",
-      "urlToImage": "https://bl-i.thgim.com/public/news/v0spq4/article67368801.ece/alternates/LANDSCAPE_1200/BL0210_Quantum_2018-MeerKAT.jpg",
-      "publishedAt": "2023-10-01T10:05:47Z",
-      "content": "In 2018, Thoughtworks, a consultancy specialising in software and digital transformation, revealed a two-year collaboration with the Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pu… [+3433 chars]",
-      "username": "GAURAV",
-      "useremail": "maliraje123@gmail.com",
-      "id": 3
     }
   ]
 }

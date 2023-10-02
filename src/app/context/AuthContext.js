@@ -1,5 +1,3 @@
-"use client"
-
 import { useContext, createContext, useState, useEffect } from "react";
 import {
     signInWithPopup,
@@ -14,38 +12,38 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [authData, setAuthData] = useState(() => {
-
-        const storedAuthData = localStorage.getItem('authData');
-        return storedAuthData ? JSON.parse(storedAuthData) : null;
+        if (typeof window !== 'undefined') {
+            const storedAuthData = localStorage.getItem('authData');
+            return storedAuthData ? JSON.parse(storedAuthData) : null;
+        }
+        return null;
     });
+
     const googleSignIn = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider);
-
     };
 
     const logOut = () => {
         signOut(auth);
         setAuthData(null);
-
     };
 
     const updateAuthData = (newAuthData) => {
         setAuthData(newAuthData);
     };
 
-
     useEffect(() => {
-        localStorage.setItem('authData', JSON.stringify(authData));
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('authData', JSON.stringify(authData));
+        }
 
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
         });
+
         return () => unsubscribe();
     }, [user, authData]);
-
-
-
 
     return (
         <AuthContext.Provider value={{ user, googleSignIn, logOut, authData, updateAuthData }}>

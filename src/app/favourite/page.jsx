@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import ReadMoreButton from '../pages/news/ReadMoreButton'
 import { Toaster, toast } from 'react-hot-toast'
 import { UserAuth } from "../context/AuthContext";
-import PrivateRoute from '../routes/page'
 
 const Favourite = () => {
   const { user, authData } = UserAuth();

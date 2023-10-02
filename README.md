@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Triveous Assignment 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Building an Interactive News application
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Description:** 
+Create a dynamic and user-friendly news application using Next.js that empowers users to stay updated with the latest news articles, manage their favorite news, and enjoy the convenience of signing up and logging in through Google authentication.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tech Stack : 
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend:
+- Next.js: Utilized for building the user interface and providing a seamless, server-rendered experience.
+- JavaScript: Used for enhancing interactivity and functionality on the frontend.
+- Tailwind CSS: Employed for structuring and styling the web pages, ensuring a modern and responsive design.
+- Axios: A popular HTTP client for making requests to the backend and fetching news articles.
+- OAuth (Google Login): Integrated Google authentication for user login, enhancing security and convenience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features :
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 1. Landing Page:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Display the latest news articles to users.
+- Allow users to click the "Read More" button to access the full article description.
+- Users can add articles to their favorites directly from the landing page.
+
+![Screenshot (1993)](https://github.com/gauravpardeshi1/Triveous/assets/112778106/baa4aea5-e791-4547-b94e-9d1f87841226)
+
+#### 2. Article Description Page:
+
+- Provide a detailed article description, including text and media.
+- Include a "Read More" button for users to access the full article.
+![Screenshot (1998)](https://github.com/gauravpardeshi1/Triveous/assets/112778106/f1d921b5-1ec0-4634-8218-bbe175b912e6)
+
+#### 3. Sign In/Sign Up Page:
+
+- Allow users to sign in with their email and password or via Google Sign-In.
+- Provide a registration form for new users to sign up.
+- Ensure password security and validation for user accounts.
+
+
+![Screenshot (1995)](https://github.com/gauravpardeshi1/Triveous/assets/112778106/dc7b017e-58f5-498c-bed4-6e7d42f41f4f)
+
+#### 4. Mobile View:
+![Screenshot (1996)](https://github.com/gauravpardeshi1/Triveous/assets/112778106/e8a4e9c9-7cd1-4d58-83e6-59941a43b8aa)
+
+
+
+
+
+
+
+

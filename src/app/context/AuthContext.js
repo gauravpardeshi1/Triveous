@@ -1,3 +1,6 @@
+'use client'
+
+
 import { useContext, createContext, useState, useEffect } from "react";
 import {
     signInWithPopup,
@@ -21,7 +24,12 @@ export const AuthContextProvider = ({ children }) => {
 
     const googleSignIn = () => {
         const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider);
+        try {
+            signInWithPopup(auth, provider);
+            
+        } catch (error) {
+            console.error('Google Sign-In Error:', error);
+        }
     };
 
     const logOut = () => {

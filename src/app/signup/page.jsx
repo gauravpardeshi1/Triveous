@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const Signup = () => {
   const [name, setname] = useState('')
@@ -12,6 +12,7 @@ const Signup = () => {
   const [password, setpassword] = useState('')
   const [checkuser, setcheckusser] = useState([])
 
+  const router=useRouter()
 
 
   const getUser = () => {
@@ -51,6 +52,7 @@ const Signup = () => {
             setname('')
             setemail('')
             setpassword('')
+            router.push('/signin')
            
 
           }

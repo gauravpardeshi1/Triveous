@@ -62,7 +62,7 @@ const Signin = () => {
 
   useEffect(() => {
     getUser()
-    console.log('user',user)
+   // console.log('user',user)
     if(user){
       toast('User Login successful!', {
         icon: '✔️ ',

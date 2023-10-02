@@ -96,9 +96,9 @@ const Artical = ({ data }) => {
 
     return (
 
-        <div className=''>
+        <div className='' >
             <Toaster />
-            <article className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">
+            <article   className=" h-[100%] flex flex-col w-full relative max-w-sm mx-auto transition-all duration-200 ease-out rounded-lg shadow-md bg-article-light dark:bg-article-dark shadow-article-light-secondary/70 dark:shadow-article-dark-primary/70 hover:shadow-xl hover:shadow-article-light-secondary dark:hover:shadow-dark-primary">
                 <a href="" onClick={handlefavouritenews} className='hover:cursor-pointer justify-end absolute right-5 mt-3'>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
